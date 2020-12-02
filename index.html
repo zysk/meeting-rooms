@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7c729127f1.js" crossorigin="anonymous"></script>
+    <title>Meetings - Zysk</title>
+</head>
+<body onload="getjson()">
+    <section>
+            <div class="row">
+                <img src="team-Images/ZyskLogo.svg" class=" mt-4 ml-5" style="width:6rem;">
+            </div>
+       
+    </section>
+    <!-- MEETING ROOMS -->
+    <section>
+        <div class="container py-5">
+            <div class="row ">
+                <div class="col-sm-5 col-lg-6">
+                    <img src="illustrations/MeetingRooms.svg" class="img-fluid my-4">
+                </div>
+                <div class="col-sm-7 col-lg-6">
+                   <h1 class="header headings">Meeting Rooms</h1>
+                   <p class=" mt-4 mb-5">Meeting rooms designed to keep our team and your clients comfortable, creative and focused.Simply click on one of these rooms to enter a meeting.If you're looking for a one on one session, scroll down to the individual rooms section.Make sure you've got company!</p>
+                   <a href="https://www.uberconference.com/room/zysktechnologies" style="background-color: rgb(0, 0, 97);" class="btn btn-dark px-5">Uber</a><a href="https://whereby.com/zysk" style="background-color: #006654;" class="btn btn-dark ml-2 px-5">WhereBy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT ROOMS -->
+    <section>
+      <div class="container py-5">
+        <div class="row ">
+            <div class="col-sm-7 col-lg-6">
+                <h1 class="header headings">Project Rooms</h1>
+                <p class=" mt-4 mb-5">Enter our project specific rooms.Every project has a room of it's own.Simply look for the join button at the end of the project you're looking for, click on it and you're in.Need help looking for a project??Browse by category.</p>
+             </div>
+             <div class="col-sm-5 col-lg-6">
+                <img src="illustrations/ProjectRooms.svg" class="img-fluid my-4">
+            </div>
+           
+        </div>
+    </div>
+      <div class="container ">
+          <div class="row d-flex align-items-center justify-content-center mb-4">
+           <p class="mx-4 menu_header alpha  red_bold" onclick="showAll()">All</p>
+           <p class="mx-4 menu_header beta" onclick="FrontEnd()">Frontend</p>
+           <p class="mx-4 menu_header gamma" onclick="BackEnd()">Backend</p>
+           <p class="mx-4 menu_header delta" onclick="Wordpress()">Wordpress</p> 
+          </div>
+          <div class="row CustomCards">
+            <!-- -------------------------------------add projects--------------------------- -->
+            <!-- <div class="col-lg-4 col-md-6 order-last my-2 d-flex align-items-center justify-content-center">
+              <div class="addCards rounded d-flex align-items-center justify-content-center" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus fa-4x text-white "></i></div>
+          </div> -->
+            <!-- ----------------------------------------ADD PROJECTS--------------------------------- -->
+          </div>
+          
+         
+      </div>
+        <!-- ----------------------MODAL------------------------------- -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Project Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form name="cardMaker">
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1"> Project Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" name="projectName">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Category</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="projectCategory">
+                      <option>Frontend</option>
+                      <option>Backend</option>
+                      <option>Wordpress</option>
+                    
+                    </select>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1">Project Logo</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="projectlogo">
+                    <!-- <input type="email" class="form-control" id="logo" name="projectlogo"> -->
+                  </div>
+                  <div class="form-group">
+                    <label for="meetingLink"> Meeting Link</label>
+                    <input type="email" class="form-control" id="meetingLink" name="meetLink">
+                  </div>
+                 
+                </form>
+                 <button type="submit" class="btn btn-primary" onclick="addProjects()">Create</button>
+              </div>
+              
+              
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- INDIVIDUAL ROOMS -->
+    <section>
+        <div class="container py-5 mt-4">
+            <div class="row ">
+             
+                <div class="col-sm-7 col-lg-6 mx-2">
+                    <h1 class="header">Individual Rooms</h1>
+                   
+                 </div>
+                
+               
+            </div>
+        </div>
+        <div class="container">
+            <!-- -----------------------------------------------ROW----------------------------------------------------------- -->
+            <div class="row teamDeck">
+                <div class="col-lg-3 d-flex align-items-center justify-content-center">
+                    <div class="card" style="width: 15rem;">
+                        <img src="team-Images/ZyskLogo.svg" class="card-img-top p-5" alt="..." style="height: 187px;">
+                        <div class="card-body">
+                          <h5 class="card-title text-center semiBold">Zysk</h5>
+                          <div class="row d-flex align-items-center justify-content-center">
+                            <a href="https://meet.google.com/mbt-fzzk-dix" class="btn btn-dark px-4 " style="background-color: #006654;"><span class="px-2">WhereBy - Internal</span></a>
+                           </div>
+                        </div>
+                      </div>
+                </div>
+               
+               <!-- -----------------------------------ADD MEMBERS---------------------------------------------------------- -->
+<!--      
+                <div class="col-lg-3 col-md-6 order-last my-2 d-flex align-items-center justify-content-center"> 
+                  <div class="addmembers rounded d-flex align-items-center justify-content-center" data-toggle="modal" data-target="#exampleModal2"><i class="fas fa-plus fa-4x text-white "></i></div>
+              </div> -->
+              <!-- ---------------------------------------------add members-------------------------------------------------------- -->
+            </div>
+
+          
+               
+        </div>
+        <!-- -------------------------------------------MODAL------------------------------------------------------- -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Member Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form name="teamMaker">
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" name="memberName">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Designation</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" name="memberDesig">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1">Picture</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" name="dp">
+                    
+                  </div>
+                  <div class="form-group">
+                    <label for="meetingLink"> Meeting Link</label>
+                    <input type="email" class="form-control" id="meetingLink2" name="roomKey">
+                  </div>
+                 
+                </form>
+                 <button type="submit" class="btn btn-primary" onclick="addTeam()">Create</button>
+              </div>
+              
+              
+            </div>
+          </div>
+        </div>
+    </section>
+    <footer class="footer pt-3 text-center"><p>© 2019 Zysk Technologies</p></footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+ function showAll() {
+  $(".alpha").addClass("red_bold");
+  $(".beta").removeClass("red_bold");
+  $(".gamma").removeClass("red_bold");
+  $(".delta").removeClass("red_bold");
+  $(".Frontend").addClass('d-flex');
+  $(".Frontend").show();
+  $(".Backend").addClass('d-flex');
+  $(".Backend").show();
+  $(".Wordpress").addClass('d-flex');
+  $(".Wordpress").show();
+
+ }
+
+ function FrontEnd(){
+  $(".beta").addClass("red_bold");
+  $(".alpha").removeClass("red_bold");
+  $(".gamma").removeClass("red_bold");
+  $(".delta").removeClass("red_bold");
+  $(".Frontend").addClass('d-flex');
+  $(".Frontend").show();
+  $(".Backend").removeClass('d-flex');
+  $(".Backend").addClass('d-none');
+  $(".Wordpress").removeClass('d-flex');
+  $(".Wordpress").addClass('d-none');
+ }
+
+function Wordpress(){
+  $(".delta").addClass("red_bold");
+  $(".beta").removeClass("red_bold");
+  $(".alpha").removeClass("red_bold");
+  $(".gamma").removeClass("red_bold");
+  $(".Frontend").removeClass('d-flex');
+  $(".Frontend").hide();
+  $(".Backend").removeClass('d-flex');
+  $(".Backend").hide();
+  $(".Wordpress").addClass('d-flex');
+  $(".Wordpress").show();
+}
+
+function BackEnd() {
+  $(".gamma").addClass("red_bold");
+  $(".beta").removeClass("red_bold");
+  $(".delta").removeClass("red_bold");
+  $(".alpha").removeClass("red_bold");
+  $(".Frontend").removeClass('d-flex');
+  $(".Frontend").hide();
+  $(".Backend").addClass('d-flex');
+  $(".Backend").show();
+  $(".Wordpress").removeClass('d-flex');
+  $(".Wordpress").hide();
+}
+
+function addProjects(){
+  var cardTitle=document.forms["cardMaker"]["projectName"].value; //taking values user has entered.
+  var cardCategory=document.forms["cardMaker"]["projectCategory"].value;
+  var meetingLink=document.forms["cardMaker"]["meetLink"].value;
+  var projectLogo=document.forms["cardMaker"]["projectlogo"].value;
+  $('.CustomCards').append('<div class="col-lg-4 col-md-6 my-3 '+cardCategory+' d-flex align-items-center justify-content-center"><div class="card" style="width: 15rem;"><div class="card-body"><div class="row"><div class="col"><h5 class="card-title semiBold">'+cardTitle+'</h5><h6 class="card-subtitle mb-2 text-muted">'+cardCategory+'</h6></div><div class="col"><img class="img-fluid projectLogo" src="'+projectLogo+'"></div></div><a href="'+meetingLink+'">Join</a></div></div></div>'); 
+
+
+  let projects=[];
+  let project= {
+     projectName: cardTitle,
+     projectCategory: cardCategory,
+
+  }
+  projects.push(project);
+  document.forms[0].reset(); 
+
+  console.warn('added', {projects}); //printing into the console.
+  localStorage.setItem('MyProjectsList',JSON.stringify(projects));
+
+}
+
+function addTeam(){
+  var Name=document.forms["teamMaker"]["memberName"].value; //taking values user has entered.
+  var desig=document.forms["teamMaker"]["memberDesig"].value;
+  var roomKey=document.forms["teamMaker"]["roomKey"].value;
+  var memberPic=document.forms["teamMaker"]["dp"].value;
+  $('.teamDeck').append(' <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center"><div class="card m-2" style="width: 15rem;"><img src="'+memberPic+'" class="card-img-top" alt="..." ><div class="card-body"><h5 class="card-title text-center semiBold">'+Name+'</h5><p class="card-text text-center text-muted">'+desig+'</p><a href="'+roomKey+'" class="btn btn-dark px-4 d-flex align-items-center justify-content-center">Google Meet</a></div></div></div>');
+}
+
+
+function getjson(){
+  $.getJSON('members.json',function(data) { //teams
+    $(data.members).each(function(index,value){
+      $('.teamDeck').append('<div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center"><div class="card m-2" style="width: 15rem;"><img src="'+value.image_link+'" class="card-img-top" alt="..." ><div class="card-body"><h5 class="card-title text-center semiBold">'+value.name+'</h5><p class="card-text text-center text-muted"></p><a href="'+value.link+'" class="btn btn-dark px-4 d-flex align-items-center justify-content-center">Google Meet</a></div></div></div> ');
+    });
+ 
+
+    
+  })};
+
+  $.getJSON('projects.json',function(data) {  //projects
+    $(data.projects).each(function(index,value){
+      $('.CustomCards').append('<div class="col-lg-4 col-md-6 my-3 '+value.projectCategory+' d-flex align-items-center justify-content-center"><div class="card" style="width: 15rem;"><div class="card-body"><div class="row"><div class="col"><h5 class="card-title semiBold">'+value.project_name+'</h5><h6 class="card-subtitle mb-2 text-muted">'+value.projectCategory+'</h6></div><div class="col"><img class="img-fluid projectLogo" src="'+value.logo_link+'"></div></div><a href="'+value.roomLink+'">Join</a></div></div></div>');
+    });
+  
+})
+
+</script>
+
+
+</html>

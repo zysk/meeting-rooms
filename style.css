@@ -1,0 +1,62 @@
+.header{
+
+    font: 800 2.25rem Barlow,sans-serif;
+}
+.header:after {
+    content: "";
+    display: block;
+    width: 1.6rem;
+    border-top: 4px solid #ff4b4b;
+    margin-top: 10px;
+}
+p{
+    font-size: large;
+    
+}
+body{
+    border: .5rem solid #ff4b4b;
+    border-bottom: 0;
+    overflow-y: scroll;
+}
+.menu_header:hover{
+
+    font-weight: bold;
+    color:red;
+}
+.projectLogo{
+    max-height:60px;
+}
+.red_bold{
+    font-weight: bold;
+    color:red;
+}
+.card-img-top{
+    height: 200px;
+}
+.footer{
+    background-color: #000;
+    color: #84f3ec;
+    overflow: auto;
+}
+.addCards{
+    cursor: pointer;
+    background-color: #ff4b4b;
+    height: 120px;
+    width: 240px;
+}
+.addmembers{
+    cursor: pointer;
+    background-color: #ff4b4b;
+    height: 360px;
+    width: 240px;
+}
+.headings{
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+body{
+    font-family: 'Hind Siliguri', sans-serif;
+}
+.semiBold{
+  font-weight: 600;
+}
