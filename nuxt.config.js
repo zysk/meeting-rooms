@@ -33,7 +33,20 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxt/content',
   ],
+
+  content: {
+    // Options
+    fullTextSearchFields: ['name'],
+  },
+
+  vuetify: {
+    customVariables: ['~/assets/css/variables.scss'],
+    theme: {
+      dark: false,
+    },
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
