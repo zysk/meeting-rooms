@@ -6,6 +6,12 @@
 # install dependencies
 $ yarn install
 
+## Roadmap
+- [x] HTML page with meeting rooms
+- [x] Build a static site using Nuxt.js
+- [x] Update URLs through JSON files
+- [ ] Add rooms
+
 # serve with hot reload at localhost:3000
 $ yarn dev
 
