@@ -9,7 +9,7 @@
   {
     "name": "Varun",
     "profileImage": "https://avatars1.githubusercontent.com/u/6770070?s=400&u=eccc394ca6ed177096d8d0a94584fe05066ace23&v=4",
-    "googleMeet": "https://meet.google.com/vqs-psxi-yns",
+    "googleMeet": "https://meet.google.com/dgv-dzbn-mny",
     "frequentlyUsed": true,
     "bookmark": false
   },
@@ -91,20 +91,6 @@
     "bookmark": false
   },
   {
-    "name": "Saumya",
-    "profileImage": "https://avatars1.githubusercontent.com/u/67013688?s=400&u=87838b637ac7a935cb5710057de94c8b824eb5f5&v=4",
-    "googleMeet": "https://meet.google.com/vjc-dmff-sjb",
-    "frequentlyUsed": false,
-    "bookmark": false
-  },
-  {
-    "name": "Hemanth",
-    "profileImage": "https://ca.slack-edge.com/T04E92V7D-U0SRD1V53-g9f6b6f98fd5-512",
-    "googleMeet": "https://meet.google.com/qpk-qrno-fxb",
-    "frequentlyUsed": false,
-    "bookmark": false
-  },
-  {
     "name": "Prateek",
     "profileImage": "https://ca.slack-edge.com/T04E92V7D-U019F6TL7TR-e5aa2bf4a4ff-512",
     "googleMeet": "https://meet.google.com/kxp-csot-vxg",
@@ -126,10 +112,10 @@
     "bookmark": false
   },
   {
-    "name": "Bhavana",
-    "profileImage": "https://avatars2.githubusercontent.com/u/71636050?s=400&u=4a320b6492d98fb1f46473c798d35b69e2c1d7de&v=4",
-    "googleMeet": "https://meet.google.com/ynk-sixn-xvf",
-    "frequentlyUsed": false,
+    "name": "Jiki",
+    "profileImage": "https://avatars.githubusercontent.com/u/52694356?s=96&v=4",
+    "googleMeet": "https://meet.google.com/mss-voww-zfc",
+    "frequentlyUsed": true,
     "bookmark": false
   }
 ]
