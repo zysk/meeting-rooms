@@ -117,5 +117,12 @@
     "googleMeet": "https://meet.google.com/mss-voww-zfc",
     "frequentlyUsed": true,
     "bookmark": false
+  },
+   {
+    "name": "Rishika",
+    "profileImage": "https://avatars.githubusercontent.com/u/77378808?s=400&u=6adf15c9cf4a8aba18be404184b07c173fa32fad&v=4",
+    "googleMeet": "https://meet.google.com/gnr-apzh-rqw",
+    "frequentlyUsed": false,
+    "bookmark": false
   }
 ]
