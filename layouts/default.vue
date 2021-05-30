@@ -20,14 +20,14 @@
         <v-icon>mdi-star</v-icon>
       </v-btn>
 
-      <v-btn icon>
-        <v-icon>mdi-information</v-icon>
+      <v-btn icon href="https://github.com/zysk/meeting-rooms" target="_blank">
+        <v-icon>mdi-github</v-icon>
       </v-btn>
     </v-app-bar>
 
     <Nuxt id="scrolling-techniques-7" />
 
-    <v-footer color="secondary lighten-1" padless>
+    <v-footer class="mt-12" color="secondary lighten-1" padless>
       <v-row justify="center" no-gutters>
         <v-btn
           v-for="link in links"
