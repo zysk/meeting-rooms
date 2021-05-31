@@ -1,50 +1,52 @@
 <template>
-  <v-container>
-    <v-row align="center" justify="center">
-      <v-col cols="12" lg="8" align="center" justify="center">
-        <h1 class="text-h3 font-weight-thin text-center mt-16 mb-8">
-          Let's get talking...
-        </h1>
+  <client-only>
+    <v-container>
+      <v-row align="center" justify="center">
+        <v-col cols="12" lg="8" align="center" justify="center">
+          <h1 class="text-h3 font-weight-thin text-center mt-16 mb-8">
+            Let's get talking...
+          </h1>
 
-        <v-text-field
-          v-model="query"
-          type="search"
-          autocomplete="off"
-          placeholder="Who do you want to talk to?"
-          prepend-inner-icon="mdi-magnify"
-          class="search-bar"
-          single-line
-          filled
-          rounded
-        ></v-text-field>
-      </v-col>
-
-      <v-col cols="12" md="6">
-        <v-toolbar class="px-0" flat>
-          <v-toolbar-title class="text-h5 font-weight-thin ml-n4">
-            Meeting rooms:</v-toolbar-title
-          >
-
-          <v-spacer></v-spacer>
-
-          <v-select
-            v-model="selectedFilter"
-            :items="filters"
-            item-text="name"
-            item-value="key"
-            menu-props="auto"
-            label="Filter rooms"
-            hide-details
-            prepend-icon="mdi-filter"
+          <v-text-field
+            v-model="query"
+            type="search"
+            autocomplete="off"
+            placeholder="Who do you want to talk to?"
+            prepend-inner-icon="mdi-magnify"
+            class="search-bar"
             single-line
-            class="rooms-filter text-body-2"
-          ></v-select>
-        </v-toolbar>
+            filled
+            rounded
+          ></v-text-field>
+        </v-col>
 
-        <MeetingRooms :rooms="rooms" class="meeting-rooms" />
-      </v-col>
-    </v-row>
-  </v-container>
+        <v-col cols="12" md="6">
+          <v-toolbar class="px-0" flat>
+            <v-toolbar-title class="text-h5 font-weight-thin ml-n4">
+              Meeting rooms:</v-toolbar-title
+            >
+
+            <v-spacer></v-spacer>
+
+            <v-select
+              v-model="selectedFilter"
+              :items="filters"
+              item-text="name"
+              item-value="key"
+              menu-props="auto"
+              label="Filter rooms"
+              hide-details
+              prepend-icon="mdi-filter"
+              single-line
+              class="rooms-filter text-body-2"
+            ></v-select>
+          </v-toolbar>
+
+          <MeetingRooms :rooms="rooms" class="meeting-rooms" />
+        </v-col>
+      </v-row>
+    </v-container>
+  </client-only>
 </template>
 
 <script>
