@@ -1,0 +1,18 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+// Variables
+@import "variables";
+
+body {
+    font-family: "Poppins" !important;
+}
+
+.layout {
+    background-image: linear-gradient(
+        to top,
+        #fdcbf1 0%,
+        #fdcbf1 1%,
+        #e6dee9 100%
+    );
+}
