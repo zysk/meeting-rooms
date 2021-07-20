@@ -15,7 +15,10 @@ class SearchController extends Controller
             ->orWhere('last_name','like','%'.$request->data.'%')
             ->orWhere('email','like','%'.$request->data.'%')
             ->get(['id','first_name', 'last_name', 'email', 'profile_photo']);
-            return $data;
+
+            return Inertia::render('home/index', [
+                'data' => $data
+            ]);
         }
     }
 }
